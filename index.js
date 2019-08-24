@@ -4,10 +4,8 @@ const app = express();
 
 app.get('/config', (req, res) => {
   const configs = {
-      "FIRESTORE_KEY" : "something_else",
-      "MY_KEY" : "something"
+      "FIRESTORE_KEY" : process.env.BGK_FIRESTORE
   }
-  console.log(`My Config is ${process.env.BGK_FIRESTORE}`);
   res.send(configs);
 });
 
