@@ -6,7 +6,7 @@ app.get('/config', (req, res) => {
   const configs = {
       "FIRESTORE_KEY" : process.env.BGK_FIRESTORE
   }
-  res.send(configs);
+  res.json(configs);
 });
 
 app.listen(process.env.PORT || 3000, () =>
