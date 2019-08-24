@@ -1,6 +1,9 @@
 let express  = require('express');
 let dotenv = require("dotenv")
+let cors = require("cors")
 const app = express();
+
+app.use(cors());
 
 app.get('/config', (req, res) => {
   const configs = {
