@@ -9,7 +9,7 @@ app.get('/config', (req, res) => {
     const allConfigKeys = Object.keys(process.env).filter(k => k.indexOf(CONFIG_PREFIX) !== -1);
     if(allConfigKeys.length > 0){
         const allConfigs = {};
-        allConfigKeys.forEach(k => allConfigs[k] = process.env[`${CONFIG_PREFIX}_${k}`])
+        allConfigKeys.forEach(k => allConfigs[k] = process.env[k])
         res.json(allConfigs);
     }else{
         res.json({"error" : "No Config Found"})
