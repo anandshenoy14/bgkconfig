@@ -1,3 +1,4 @@
+require('appmetrics-dash').attach();
 let express = require('express');
 let dotenv = require("dotenv")
 let cors = require("cors")
