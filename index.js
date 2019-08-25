@@ -6,9 +6,7 @@ const app = express();
 app.use(cors());
 
 app.get('/config', (req, res) => {
-  const configs = {
-      "FIRESTORE_KEY" : process.env.BGK_FIRESTORE
-  }
+  const configs = Object.assign({},process.env.config);
   res.json(configs);
 });
 
