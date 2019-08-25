@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 
 app.get('/config', (req, res) => {
-  const configs = Object.assign({},process.env.config);
+  const configs = Object.assign({},process.env.BGK_CONFIGS);
   res.json(configs);
 });
 
